@@ -1,19 +1,23 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hangman;
 
-/**
- *
- * @author jessicahildenbrand
- */
-public class Hangman {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+public class Hangman {
+String name;
+String instructions = "This is the game of Hangman \n\n";
+    
+
+
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Hangman myGame = new Hangman();
+        myGame.getName();
+        myGame.displayHelp();
+    }
+    public void getName() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter Your Name: ");
+        this.name = input.next();
     }
 }
