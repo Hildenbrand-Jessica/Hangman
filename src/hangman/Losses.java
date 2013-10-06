@@ -9,7 +9,7 @@ package hangman;
  * @author jessicahildenbrand
  */
 public class Losses {
-    String numLosses= t
+    String numLosses= t;
     public void displayNumLosses() {
         System.out.println ("You have" + this.numLosses + "losses.")
 }
