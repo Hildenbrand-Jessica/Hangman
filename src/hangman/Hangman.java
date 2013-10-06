@@ -22,4 +22,8 @@ String instructions = "This is the game of Hangman \n\n";
         this.name = input.next();
 
     }
+
+    private void displayHelp() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
