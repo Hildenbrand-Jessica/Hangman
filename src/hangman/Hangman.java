@@ -15,6 +15,12 @@ String instructions = "This is the game of Hangman \n\n";
         Hangman myGame = new Hangman();
         myGame.getName();
         myGame.displayHelp();
+        AskForWord myAskForWord = new AskForWord();
+        myAskForWord.displayBlankSpaces();
+        Losses myLosses = new Losses();
+        Losses.displayNumLosses();
+        Wins myWins = new Wins();
+        Wins.displaynumWins();
     }
     public void getName() {
         Scanner input = new Scanner(System.in);
