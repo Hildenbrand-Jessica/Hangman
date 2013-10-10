@@ -1,4 +1,3 @@
-
 package hangman;
 
 import java.util.Scanner;
@@ -18,9 +17,9 @@ String instructions = "This is the game of Hangman \n\n";
         AskForWord myAskForWord = new AskForWord();
         myAskForWord.displayBlankSpaces();
         Losses myLosses = new Losses();
-        Losses.displayNumLosses();
+        myLosses.displayNumLosses();
         Wins myWins = new Wins();
-        Wins.displaynumWins();
+        myWins.displayWins();
     }
     public void getName() {
         Scanner input = new Scanner(System.in);
