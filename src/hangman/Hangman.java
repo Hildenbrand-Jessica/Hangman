@@ -17,6 +17,7 @@ public class Hangman {
         myGame.getName();
         myGame.displayHelp();
         AskForWord myAskForWord = new AskForWord();
+        myAskForWord.checkWord();
         myAskForWord.displayBlankSpaces();
         Losses myLosses = new Losses();
         myLosses.displayNumLosses();

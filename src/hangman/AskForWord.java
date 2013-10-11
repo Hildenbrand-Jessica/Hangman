@@ -11,6 +11,9 @@ import java.util.Scanner;
  * @author jessicahildenbrand
  */
 public class AskForWord {
+    String inputWord = getWord();
+    char[] inputArray = new char[inputWord.length()];
+    
     int spaces;
     int numberOfSpaces;
     int numberOfLetters;
@@ -24,6 +27,9 @@ public class AskForWord {
     }
     
     public void displayBlankSpaces() {
+        for(int i=0; i<inputArray.length; i++){
+            
+        }
         System.out.println("There are " + this.spaces + " spaces.");
     }
     void getSpaces(){
@@ -36,4 +42,19 @@ public class AskForWord {
         numberOfLetters= "The number of letters needed is" + numberOfSpaces;
         System.out.println("The secret word has" + this.spaces + "spaces.");
     }
+    public String getWord() {
+    String hangmanWord = "halloween"; 
+    return hangmanWord;
+    }
+    
+    public void checkWord(){
+    String pattern = "[a-zA-Z]*";
+    if(inputWord.matches(pattern) == false){
+        System.out.println("Oops! Your word contained more than just letters. Input a word with just letters.");
+    }else{
+        System.out.println("Good word!");
+    }        
+    }
 }
+   
+
