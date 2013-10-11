@@ -15,6 +15,7 @@ public class AskForWord {
     int numberOfSpaces;
     int numberOfLetters;
     
+    //Function
     public AskForWord() {
         spaces= 4;
         numberOfSpaces= 3;
@@ -28,6 +29,7 @@ public class AskForWord {
     void getSpaces(){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Secret Word");
+        //Casting
         this.spaces = Integer.parseInt(input.next());
     }
     public void displaySpaces(String numberOfLetters, String numberOfSpaces){
