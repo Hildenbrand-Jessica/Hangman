@@ -3,10 +3,12 @@ package hangman;
 import java.util.Scanner;
 
 public class Hangman {
-String name;
-String instructions = "This is the game of Hangman \n\n";
+    String name;
+    String instructions = "This is the game of Hangman \n\n";
     
-
+    public Hangman() {
+    
+    }
 
     
     public static void main(String[] args) {
@@ -19,7 +21,7 @@ String instructions = "This is the game of Hangman \n\n";
         Losses myLosses = new Losses();
         myLosses.displayNumLosses();
         Wins myWins = new Wins();
-        myWins.displayWins();
+        myWins.displayNumWins();
     }
     public void getName() {
         Scanner input = new Scanner(System.in);
@@ -28,7 +30,7 @@ String instructions = "This is the game of Hangman \n\n";
 
     }
 
-    private void displayHelp() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void displayHelp() {
+        System.out.println("Help Menu to Come");
     }
 }

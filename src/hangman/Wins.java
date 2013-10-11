@@ -3,9 +3,13 @@ package hangman;
 
 
 public class Wins {
-    String numWins = z;
-    public void displayWins(); {
-        System.out.println("You have" + this.numWins + "wins.");
+    int numWins;
+    
+    public Wins() {
+        numWins=3;
+    }
+    public void displayNumWins() {
+        System.out.println("You have " + this.numWins + " wins.");
 }
     
 }

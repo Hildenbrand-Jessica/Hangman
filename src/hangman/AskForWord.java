@@ -11,18 +11,26 @@ import java.util.Scanner;
  * @author jessicahildenbrand
  */
 public class AskForWord {
-    String spaces;
-    String numberOfSpaces;
-    String numberOfLetters;
+    int spaces;
+    int numberOfSpaces;
+    int numberOfLetters;
+    
+    public AskForWord() {
+        spaces= 4;
+        numberOfSpaces= 3;
+        numberOfLetters=3;
+        
+    }
+    
     public void displayBlankSpaces() {
-        System.out.println("There are" + this.spaces + "spaces.");
+        System.out.println("There are " + this.spaces + " spaces.");
     }
     void getSpaces(){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Secret Word");
-        this.spaces = input.next();
+        this.spaces = Integer.parseInt(input.next());
     }
-    public void displaySpaces(numberOfLetters, numberOfSpaces){
+    public void displaySpaces(String numberOfLetters, String numberOfSpaces){
         numberOfLetters= "The number of letters needed is" + numberOfSpaces;
         System.out.println("The secret word has" + this.spaces + "spaces.");
     }

@@ -9,9 +9,13 @@ package hangman;
  * @author jessicahildenbrand
  */
 public class Losses {
-    String numLosses= t;
+    int numLosses;
+    
+    public Losses() {
+        numLosses=3;
+    }
     public void displayNumLosses() {
-        System.out.println ("You have" + this.numLosses + "losses.")
+        System.out.println ("You have " + this.numLosses + " losses.");
 }
     
 }
