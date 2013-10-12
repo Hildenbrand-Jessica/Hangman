@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hangman;
 
 /**
@@ -14,9 +11,13 @@ public class HangmanBody {
     String head;
     String body;
     String leftArm;
-    String rightArM;
+    String rightArm;
     String leftLeg;
     String rightLeg;
+    
+    public HangmanBody() {
+        
+    }
     
     public static void main(String[] args){
     }

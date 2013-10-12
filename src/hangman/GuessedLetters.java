@@ -11,8 +11,11 @@ import java.util.Scanner;
  * @author hyrumandbrescia
  */
 public class GuessedLetters {
-    String repeadedLetters = "You have already guessed this letter";
+    String repeatedLetters = "You have already guessed this letter";
     String guesses;
+   
+    
+   
     public static void main(String[] args){
         
     }
