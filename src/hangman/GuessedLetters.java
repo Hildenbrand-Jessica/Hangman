@@ -16,7 +16,8 @@ public class GuessedLetters {
     public GuessedLetters(){
         
     }
-   
+   //Prints out guess a letter will eventually use it to 
+    //have the players guess the word.
      void getGuess(){
         Scanner input = new Scanner(System.in);
         System.out.println("Guess a letter...");

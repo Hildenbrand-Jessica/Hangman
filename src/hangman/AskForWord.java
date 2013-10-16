@@ -23,6 +23,8 @@ public class AskForWord {
         //Casting
         this.spaces = Integer.parseInt(input.next());
     }
+    //For the characters that the player inserts it will place
+    //an underscore for each letter. 
     public void displayBlankSpaces() {
         System.out.print("Mystery word: ");
         for(int i=0; i<spaces; i++){
@@ -35,12 +37,17 @@ public class AskForWord {
         numberOfLetters= "The number of letters needed is" + numberOfSpaces;
         System.out.println("The secret word has" + this.spaces + "spaces.");
     }
+    
+    //Gets secret word from player 1 
     public String getWord() {
         String hangmanWord;
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your hangman word: ");
         //casting
         hangmanWord = input.next(); 
+        
+        //Created an if statement to find out if the letters in the
+        //secret word are characters or numbers
         String pattern = "[a-zA-Z]*";
         if(hangmanWord.matches(pattern) == false){
             System.out.println("Oops! Your word contained more than just letters. Input a word with just letters.");
