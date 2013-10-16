@@ -12,19 +12,20 @@ import java.util.Scanner;
  */
 public class GuessedLetters {
     String repeatedLetters = "You have already guessed this letter";
-    String guesses;
-   
-    
-   
-    public static void main(String[] args){
+    String guess;
+    public GuessedLetters(){
         
     }
-     void getGuesses(){
+   //Prints out guess a letter will eventually use it to 
+    //have the players guess the word.
+     void getGuess(){
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter number of guesses");
-        this.guesses = input.next();
+        System.out.println("Guess a letter...");
+        //casting
+        this.guess = input.next();
     }
+     
     public void displayGuesses(){
-        System.out.println("You have guessed"+ this.guesses + "times already.");
+        System.out.println("You have guessed"+ this.guess + "times already.");
     }
 }
