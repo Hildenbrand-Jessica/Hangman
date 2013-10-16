@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Hangman {
     String name;
     String instructions = "This is the game of Hangman \n\n";
+    private static final HelpMenuView helpMenu = new HelpMenuView();
     
     public Hangman() {
     
