@@ -8,6 +8,6 @@ package hangman;
  *
  * @author hyrumandbrescia
  */
-public class ViewMenu {
+public class HelpMenuView {
     
 }
