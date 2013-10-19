@@ -3,6 +3,14 @@ package hangman;
 import java.util.Scanner;
 
 public class Hangman {
+
+    static Scanner getInputFile() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static HelpMenuView getHelpMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     String name;
     String instructions = "This is the game of Hangman \n\n";
     private static final HelpMenuView helpMenu = new HelpMenuView();

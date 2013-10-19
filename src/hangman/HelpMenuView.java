@@ -25,11 +25,11 @@ public class HelpMenuView {
     
     public String getInput() {
         
-        String gameStatus = null;
+        String command;
         do {
             this.display();
             
-            String command=this.getCommand();
+            command=this.getCommand();
             switch (command) {
                 case "B":
                     this.helpMenuControl.displayBoardHelp();
@@ -49,9 +49,9 @@ public class HelpMenuView {
                 case "Q": 
                     return "QUIT";
             }
-        } while (!gameStatus.equals("QUIT"));  
+        } while (!command.equals("Q"));  
         
-         return gameStatus;
+         return "PLAYING";
     }
     
     
