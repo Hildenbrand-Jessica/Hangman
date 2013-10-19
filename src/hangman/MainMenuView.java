@@ -10,8 +10,8 @@ import java.util.Scanner;
 public class MainMenuView {
     
     private static final String[][] menuItems = {
-        {"1", "One player game"},
-        {"2", "Two player game"},
+        {"1", "Two player game"},
+        {"2", "Multi player game"},
         {"H", "Help"},
         {"X", "Exit Hangman"}
     }; 

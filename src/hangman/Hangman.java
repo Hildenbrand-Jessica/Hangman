@@ -3,22 +3,35 @@ package hangman;
 import java.util.Scanner;
 
 public class Hangman {
+    
+    
+    private static final Scanner inFile= new Scanner(System.in);
+    private static final HelpMenuView helpMenu = new HelpMenuView();
+    private static final MainMenuView mainMenu = new MainMenuView();
 
-    static Scanner getInputFile() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    static HelpMenuView getHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static Scanner getInputFile() {
+        return Hangman.inFile;
     }
     String name;
     String instructions = "This is the game of Hangman \n\n";
-    private static final HelpMenuView helpMenu = new HelpMenuView();
     
     public Hangman() {
     
     }
+    
+    public static HelpMenuView getHelpMenu() {
+        return Hangman.helpMenu;
+        
+    }
+        
+    public void getName() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter Your Name: ");
+        this.name = input.next();
 
+    }
+
+    
     
     public static void main(String[] args) {
 
@@ -33,15 +46,13 @@ public class Hangman {
         myLosses.displayNumLosses();
         Wins myWins = new Wins();
         myWins.displayNumWins();
+        
+        mainMenu.getInput(null);
+        Hangman.inFile.close();
     }
-    public void getName() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter Your Name: ");
-        this.name = input.next();
-
-    }
+    
 
     public void displayHelp() {
-        System.out.println("Help Menu to Come");
+     
     }
 }

@@ -28,6 +28,10 @@ public class GameMenuView {
         
     }
 
+    GameMenuView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     
     public Object getInput(Object object) {
