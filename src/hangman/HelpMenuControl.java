@@ -1,4 +1,10 @@
 
+/**
+ *
+ * @author hyrumandbrescia
+ */
+
+
 package hangman;
 
 
@@ -69,7 +75,5 @@ public class HelpMenuControl {
         System.out.println(
         "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
-    
+}
   
-} 
-

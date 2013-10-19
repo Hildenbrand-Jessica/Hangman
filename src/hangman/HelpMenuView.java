@@ -56,13 +56,11 @@ public class HelpMenuView {
     
     
     public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
+        System.out.println("\nEnter the letter associated with one of the following commands:");
 
         for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
+            System.out.println("\t" + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
-        System.out.println("\t===============================================================\n");
     }
    protected final String getCommand() {
 
@@ -96,5 +94,5 @@ public class HelpMenuView {
         }
         return false;
     }
-  
 }
+
