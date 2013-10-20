@@ -23,9 +23,16 @@ public class GuessedLetters {
         System.out.println("Guess a letter...");
         //casting
         this.guess = input.next();
-    }
-     
-    public void displayGuesses(){
+     } 
+     public void displayGuesses(){
         System.out.println("You have guessed"+ this.guess + "times already.");
     }
+     //loop to check word and see if a letter fits
+        void placeLetter() {
+    if () {
+        ;
+    } else {
+        ;
+      }
+        }
 }

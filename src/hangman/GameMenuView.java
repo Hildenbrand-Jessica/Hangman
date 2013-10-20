@@ -23,10 +23,7 @@ public class GameMenuView {
         {"Q", "QUIT"}
     };
 
-    public GameMenuView(Game game) {
-        this.gameMenuControl = new GameMenuControl(game);
-        
-    }
+ 
 
     GameMenuView() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

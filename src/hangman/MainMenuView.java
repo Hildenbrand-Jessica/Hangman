@@ -10,13 +10,14 @@ import java.util.Scanner;
 public class MainMenuView {
     
     private static final String[][] menuItems = {
-        {"1", "Two player game"},
-        {"2", "Multi player game"},
+        {"E", "Easy Difficulty"},
+        {"M", "Medium Difficulty"},
+        {"D", "Hard Difficulty"},
         {"H", "Help"},
         {"X", "Exit Hangman"}
     }; 
   //added the MainMenuControl so that it connects to the class that Brescia will create
-    MainMenuControl mainMenuControl = new MainMenuControl();
+    MainMenuControl MainMenuControl = new MainMenuControl();
     
     public MainMenuView() {
 
@@ -31,12 +32,15 @@ public class MainMenuView {
 
             String command = this.getCommand();
             switch (command) {
-                case "1":
-                    this.mainMenuControl.startGame(1);
+                case "E":
+                    this.MainMenuControl.startGame("E");
                     break;
-                case "2":
-                    this.mainMenuControl.startGame(2);
+                case "M":
+                    this.MainMenuControl.startGame("M");
                     break;
+                case "D":
+                    this.MainMenuControl.startGame("D");
+                    break;    
                 case "H":
                     HelpMenuView helpMenu = Hangman.getHelpMenu();
                     helpMenu.getInput();

@@ -6,8 +6,6 @@ package hangman;
  * @author jessicahildenbrand
  */
 public class Game {
-    public static final String PLAYER_1 = "PLAYER_1";
-    public static final String MULTI_PLAYER = "MULTI_PLAYER";
     
     public static final String CONTINUE = "CONTINUE";
     public static final String NEW_GAME = "NEW_GAME";
@@ -87,15 +85,6 @@ public class Game {
         this.loser = loser;
     }
 
-    public Board getBoard() {
-        return board;
-    }
-
-    public void setBoard(Board board) {
-        this.board = board;
-    }
-
-
     public void setPlayingOrder(Player player1, Player player2) {
 
         double randomValue = Math.random();
@@ -127,4 +116,5 @@ public class Game {
     String getPlayerStastics() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
 }

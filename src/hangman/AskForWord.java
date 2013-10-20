@@ -13,6 +13,8 @@ public class AskForWord {
     String inputWord = getWord();
     char[] inputArray = new char[inputWord.length()];
     int spaces = inputWord.length();
+    //Determines the difficulty level and calls from Main Menu Control class
+    int numberOfGuesses = startGame;
     
     //Function
    
@@ -56,10 +58,9 @@ public class AskForWord {
             System.out.println("Good word!");
             System.out.print("\n\n\n\n\n\n\n\n");
         }
+        
         return hangmanWord;
     }
-    
-    
 }
-   
+    
 

@@ -9,10 +9,6 @@ public class GameMenuControl {
     private Game game;
     private Board board;
 
-    public GameMenuControl(Game game) {
-        this.game = game;
-        this.board = game.getBoard();
-    }
    
     
    public void takeTurn() {
