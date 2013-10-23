@@ -17,7 +17,8 @@ public class MainMenuView {
         {"X", "Exit Hangman"}
     }; 
   //added the MainMenuControl so that it connects to the class that Brescia will create
-    MainMenuControl MainMenuControl = new MainMenuControl();
+    MainMenuControl mmc = new MainMenuControl();
+    
     
     public MainMenuView() {
 
@@ -33,13 +34,13 @@ public class MainMenuView {
             String command = this.getCommand();
             switch (command) {
                 case "E":
-                    this.MainMenuControl.startGame("E");
+                    this.mmc.startGame("E");                    
                     break;
                 case "M":
-                    this.MainMenuControl.startGame("M");
+                    this.mmc.startGame("M");
                     break;
                 case "D":
-                    this.MainMenuControl.startGame("D");
+                    this.mmc.startGame("D");
                     break;    
                 case "H":
                     HelpMenuView helpMenu = Hangman.getHelpMenu();
@@ -48,9 +49,9 @@ public class MainMenuView {
                 case "X":
                     return Game.EXIT;
             }
-        } while (!gameStatus.equals("QUIT"));
+        } while (!gameStatus.equals(Game.EXIT));
 
-        return "QUIT";
+        return Game.EXIT;
     }
     
     

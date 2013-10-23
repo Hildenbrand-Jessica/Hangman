@@ -19,8 +19,8 @@ public class HangmanBody {
         
     }
     
-    public static void main(String[] args){
-    }
+    
+    
     public void hangingBodyParts(){
         System.out.println("HEAD");
     }

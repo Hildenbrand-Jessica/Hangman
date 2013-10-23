@@ -39,17 +39,16 @@ public class Hangman {
         Hangman myGame = new Hangman();
         myGame.getName();
         myGame.displayHelp();
-        AskForWord myAskForWord = new AskForWord();
-        myAskForWord.displayBlankSpaces();
-        GuessedLetters myGuessedLetters = new GuessedLetters();
-        myGuessedLetters.getGuess();
+        
+
+        //jessicahildenbrand added these
+        mainMenu.getInput(null);
+
         Losses myLosses = new Losses();
         myLosses.displayNumLosses();
         Wins myWins = new Wins();
         myWins.displayNumWins();
         
-        //jessicahildenbrand added these
-        mainMenu.getInput(null);
         Hangman.inFile.close();
     }
     

@@ -9,6 +9,7 @@ package hangman;
  * @author hyrumandbrescia
  */
 public class Body {
+/*
     int guesses= numGuesses;
 
 public static void Body() {
@@ -19,4 +20,5 @@ public static void Body() {
     if (NumberOfGuesses >= 5) System.out.print("LEFT LEG ");
     if (NumberOfGuesses >= 6) System.out.print("RIGHT LEG ");
     }
+    * */
 }

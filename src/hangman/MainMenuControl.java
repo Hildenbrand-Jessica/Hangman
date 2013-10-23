@@ -12,18 +12,23 @@ import java.util.Scanner;
  */
 public class MainMenuControl {
 
-    int numTurns;
+    Game game;
     String difficulty;
     
 public void startGame(String difficulty){
-    Game game;
+    
+    game = new Game();
+    
     switch(difficulty){
         case "E":
-          numTurns = 6;
+          game.startGame(6);
+          break;
         case "M":
-            numTurns = 5;
+          game.startGame(5);
+          break;
         case "D":
-            numTurns = 4;       
+          game.startGame(4);       
+          break;            
     }
 }   
 public void getDifficulty() {

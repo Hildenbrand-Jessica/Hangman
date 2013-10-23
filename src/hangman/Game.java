@@ -22,12 +22,15 @@ public class Game {
     private Player loser;
     private String status;
     private Board board;
-   
-
     
+    private int numTurns;
+    private int numGuesses;
+    
+    AskForWord myWord;
 
+    //Constructor
     public Game() {
-   
+        numGuesses = 0;
     }
 
     public Game(String gameType) {
@@ -69,6 +72,15 @@ public class Game {
         this.status = status;
     }
 
+    public int getNumTurns() {
+        return numTurns;
+    }
+
+    public void setNumTurns(int numTurns) {
+        this.numTurns = numTurns;
+    }
+
+    
     public Player getWinner() {
         return winner;
     }
@@ -99,6 +111,26 @@ public class Game {
 
     }
 
+    public void startGame(int numTurns) {
+        
+        String guessedLetter;
+        GuessedLetters myGuessedLetter = new GuessedLetters();
+        
+        //Set the number of turns based on difficulty level and start the game
+        setNumTurns(numTurns);
+        
+        //Ask for word
+        myWord = new AskForWord();
+        myWord.displayBlankSpaces();
+        
+        
+        //TODO: Add loop that continues until (numGuess >= numTurns) is reached
+        guessedLetter = myGuessedLetter.getGuess();
+        //numGuesses++;
+        //TODO: Check to see if the guessed letter is a match or not
+                
+        
+    }
 
     public String getWinningMessage () {
         return "\n\t*******************************************************************************"

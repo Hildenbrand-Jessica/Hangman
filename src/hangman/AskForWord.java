@@ -10,15 +10,21 @@ import java.util.Scanner;
  * @author jessicahildenbrand
  */
 public class AskForWord {
-    String inputWord = getWord();
-    char[] inputArray = new char[inputWord.length()];
-    int spaces = inputWord.length();
+    String inputWord;
+    char[] inputArray;
+    int spaces;
+    
     //Determines the difficulty level and calls from Main Menu Control class
-    int numberOfGuesses = startGame;
+  //  int numberOfGuesses = startGame;
+    
+    public AskForWord(){
+        inputWord = getWord();
+        inputArray = new char[inputWord.length()];
+        spaces = inputWord.length();        
+    }
     
     //Function
    
-    
     public void getSpaces(){
     Scanner input = new Scanner(System.in);
         System.out.println("Enter your hangman word: ");
