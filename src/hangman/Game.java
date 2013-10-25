@@ -142,4 +142,15 @@ public class Game {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+     public char guessedLetter){
+    for(int i = 0; i<=mysteryArray.length; i++){
+       if(wordArray[i] == guessedLetter){
+           mysteryArray[i] = guessedLetter;
+       }else{
+           numberGuesses--;
+       }
+    }
+    return numberGuesses;
+ } 
+    
 }
