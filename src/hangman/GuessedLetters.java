@@ -21,17 +21,30 @@ public class GuessedLetters {
     
    //Prints out guess a letter will eventually use it to 
     //have the players guess the word.
-     public String getGuess(){
-        Scanner input = new Scanner(System.in);
-        System.out.println("Guess a letter...");
-        //casting
-        this.guess = input.next();
-        
-        return this.guess;
-     } 
-     public void displayGuesses(){
-        System.out.println("You have guessed"+ this.guess + "times already.");
+ public char getGuess() {
+    Scanner letterScanner = new Scanner(System.in);
+    char letter = '0';
+    
+    do {  
+        System.out.println("Guess a letter:");
+        letter = letterScanner.next().charAt(0);
+    } while (Character.isLetter(letter) == false);
+    
+    return letter;
+} 
+ 
+ /*
+ public char[] checkGuess(char[] wordArray char[] mysteryArray char guessedLetter){
+    for(i = 0; i<=mysteryArray.length(); i++){
+       if(wordArray[i] == guessedLetter){
+           mysteryArray[i] = guessedLetter;
+       }else{
+           numberGuesses--;
+       }
     }
+    return numberGuesses;
+ } 
+ */
+}
      
 
-}

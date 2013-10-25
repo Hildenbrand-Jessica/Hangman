@@ -10,16 +10,17 @@ import java.util.Scanner;
  * @author jessicahildenbrand
  */
 public class AskForWord {
-    String inputWord;
-    char[] inputArray;
+    String inputWord = getWord();
+    char[] wordArray;
+    char[] mysteryArray;
     int spaces;
     
-    //Determines the difficulty level and calls from Main Menu Control class
+  //  Determines the difficulty level and calls from Main Menu Control class
   //  int numberOfGuesses = startGame;
     
     public AskForWord(){
-        inputWord = getWord();
-        inputArray = new char[inputWord.length()];
+        wordArray = inputWord.toCharArray();
+        mysteryArray = new char[inputWord.length()];
         spaces = inputWord.length();        
     }
     
@@ -35,15 +36,11 @@ public class AskForWord {
     //an underscore for each letter. 
     public void displayBlankSpaces() {
         System.out.print("Mystery word: ");
-        for(int i=0; i<spaces; i++){
-            inputArray[i] = '_';
-            System.out.print(inputArray[i] + " ");
+        for(int i=0; i<wordArray.length; i++){
+            mysteryArray[i] = '_';
+            System.out.print(mysteryArray[i] + " ");
         }
         System.out.print("\n");
-    }
-    public void displaySpaces(String numberOfLetters, String numberOfSpaces){
-        numberOfLetters= "The number of letters needed is" + numberOfSpaces;
-        System.out.println("The secret word has" + this.spaces + "spaces.");
     }
     
     //Gets secret word from player 1 
@@ -53,6 +50,10 @@ public class AskForWord {
         System.out.println("Enter your hangman word: ");
         //casting
         hangmanWord = input.next(); 
+        
+        
+        
+        
         
         //Created an if statement to find out if the letters in the
         //secret word are characters or numbers
@@ -67,6 +68,11 @@ public class AskForWord {
         
         return hangmanWord;
     }
+    
+    public char[] mysteryArray(){
+        return mysteryArray;
+    }
+    
 }
     
 

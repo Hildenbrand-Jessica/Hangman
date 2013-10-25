@@ -19,7 +19,6 @@ public class Hangman {
     
     }
     
-    //jessicahildenbrand added this
     public static HelpMenuView getHelpMenu() {
         return Hangman.helpMenu;
         
@@ -37,13 +36,14 @@ public class Hangman {
     public static void main(String[] args) {
 
         Hangman myGame = new Hangman();
-        myGame.getName();
-        myGame.displayHelp();
-        
-
-        //jessicahildenbrand added these
+        myGame.getName();        
         mainMenu.getInput(null);
-
+        GuessedLetters myGuessedLetters = new GuessedLetters();
+        myGuessedLetters.getGuess();
+       //myGuessedLetters.checkGuess(myGuessedLetters.getGuess());
+        
+        
+        
         Losses myLosses = new Losses();
         myLosses.displayNumLosses();
         Wins myWins = new Wins();

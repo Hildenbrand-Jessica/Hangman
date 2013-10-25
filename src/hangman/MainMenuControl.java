@@ -30,7 +30,7 @@ public void startGame(String difficulty){
           game.startGame(4);       
           break;            
     }
-}   
+   }  
 public void getDifficulty() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter E for Easy, M for Medium, or H for Hard: ");

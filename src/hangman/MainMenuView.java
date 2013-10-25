@@ -35,13 +35,13 @@ public class MainMenuView {
             switch (command) {
                 case "E":
                     this.mmc.startGame("E");                    
-                    break;
+                    return Game.EXIT;
                 case "M":
                     this.mmc.startGame("M");
-                    break;
+                    return Game.EXIT;
                 case "D":
                     this.mmc.startGame("D");
-                    break;    
+                    return Game.EXIT; 
                 case "H":
                     HelpMenuView helpMenu = Hangman.getHelpMenu();
                     helpMenu.getInput();

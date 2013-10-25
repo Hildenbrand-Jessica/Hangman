@@ -95,19 +95,6 @@ public class Game {
 
     public void setLoser(Player loser) {
         this.loser = loser;
-    }
-
-    public void setPlayingOrder(Player player1, Player player2) {
-
-        double randomValue = Math.random();
-
-        if (randomValue < 0.5) {
-            this.currentPlayer = player1;
-            this.otherPlayer = player2;
-        } else {
-            this.otherPlayer = player2;
-            this.currentPlayer = player1;
-        }
 
     }
 
@@ -125,9 +112,15 @@ public class Game {
         
         
         //TODO: Add loop that continues until (numGuess >= numTurns) is reached
-        guessedLetter = myGuessedLetter.getGuess();
+        String turnNum = "";// StringBuilder would be more efficient.
+            int numGuess = 0;
+            while (numGuess >= numTurns) {
+            numGuesses++;
+        //guessedLetter = myGuessedLetter.getGuess();
         //numGuesses++;
         //TODO: Check to see if the guessed letter is a match or not
+        
+}
                 
         
     }
