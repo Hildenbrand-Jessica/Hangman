@@ -32,19 +32,7 @@ public class GuessedLetters {
     
     return letter;
 } 
- 
- /*
- public char[] checkGuess(char[] wordArray char[] mysteryArray char guessedLetter){
-    for(i = 0; i<=mysteryArray.length(); i++){
-       if(wordArray[i] == guessedLetter){
-           mysteryArray[i] = guessedLetter;
-       }else{
-           numberGuesses--;
-       }
-    }
-    return numberGuesses;
- } 
- */
+
 }
      
 

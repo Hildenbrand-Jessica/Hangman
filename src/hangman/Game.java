@@ -100,7 +100,7 @@ public class Game {
 
     public void startGame(int numTurns) {
         
-        String guessedLetter;
+        char guessedLetter;
         GuessedLetters myGuessedLetter = new GuessedLetters();
         
         //Set the number of turns based on difficulty level and start the game
@@ -108,19 +108,20 @@ public class Game {
         
         //Ask for word
         myWord = new AskForWord();
-        myWord.displayBlankSpaces();
+        myWord.displayMysteryWord();
         
         
         //TODO: Add loop that continues until (numGuess >= numTurns) is reached
         String turnNum = "";// StringBuilder would be more efficient.
-            int numGuess = 0;
-            while (numGuess >= numTurns) {
+        while (numGuesses <= numTurns) {
+            guessedLetter = myGuessedLetter.getGuess();
             numGuesses++;
-        //guessedLetter = myGuessedLetter.getGuess();
-        //numGuesses++;
-        //TODO: Check to see if the guessed letter is a match or not
-        
-}
+            if (!letterFound(guessedLetter)) {
+                //TODO: Show body part                
+            }
+            //TODO: display the updated mystery word (spaced with guessed letters)
+            myWord.displayMysteryWord();
+        }
                 
         
     }
@@ -141,5 +142,20 @@ public class Game {
     String getPlayerStastics() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+
+
+ private boolean letterFound(char guessedLetter){
+    boolean matchFound = false;
+    
+    for(int i = 0; i < myWord.mysteryArray.length; i++){
+       if(myWord.wordArray[i] == guessedLetter){
+           matchFound = true;
+           myWord.mysteryArray[i] = guessedLetter;
+       }
+    }
+    return matchFound;
+ } 
+    
     
 }

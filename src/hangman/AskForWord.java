@@ -21,7 +21,15 @@ public class AskForWord {
     public AskForWord(){
         wordArray = inputWord.toCharArray();
         mysteryArray = new char[inputWord.length()];
-        spaces = inputWord.length();        
+        spaces = inputWord.length();    
+
+        //Initialize mystery array with "_"
+        //For the characters that the player inserts it will place
+        //an underscore for each letter. 
+        for(int i=0; i < wordArray.length; i++){
+            mysteryArray[i] = '_';
+        }
+        
     }
     
     //Function
@@ -32,12 +40,10 @@ public class AskForWord {
         //Casting
         this.spaces = Integer.parseInt(input.next());
     }
-    //For the characters that the player inserts it will place
-    //an underscore for each letter. 
-    public void displayBlankSpaces() {
+    
+    public void displayMysteryWord() {
         System.out.print("Mystery word: ");
         for(int i=0; i<wordArray.length; i++){
-            mysteryArray[i] = '_';
             System.out.print(mysteryArray[i] + " ");
         }
         System.out.print("\n");
