@@ -9,16 +9,105 @@ package hangman;
  * @author hyrumandbrescia
  */
 public class Body {
-/*
-    int guesses= numGuesses;
 
-public static void Body() {
-    if (numberOfGuesses >= 1) System.out.print("HEAD ");
-    if (numberOfGuesses >= 2) System.out.print("BODY ");
-    if (numberOfGuesses >= 3) System.out.print("LEFT ARM ");
-    if (NumberOfGuesses >= 4) System.out.print("RIGHT ARM ");
-    if (NumberOfGuesses >= 5) System.out.print("LEFT LEG ");
-    if (NumberOfGuesses >= 6) System.out.print("RIGHT LEG ");
-    }
-    * */
+public static void Body(int numberOfGuess) {
+
+    switch(numberOfGuess){
+
+        case 0:
+            System.out.println("\t------------"
+                        + "\n\t|          |"
+                        + "\n\t|          |"
+                        + "\n\t|"
+                        + "\n\t|" 
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n");
+            break;
+        case 1:
+            System.out.println("\t------------"
+                        + "\n\t|          |"
+                        + "\n\t|          |"
+                        + "\n\t|          O"
+                        + "\n\t|" 
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n");
+            break;
+        case 2:
+            System.out.println("\t------------"
+                        + "\n\t|          |"
+                        + "\n\t|          |"
+                        + "\n\t|          O"
+                        + "\n\t|          |" 
+                        + "\n\t|          |"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n");
+            break;
+        case 3:
+            System.out.println("\t------------"
+                        + "\n\t|          |"
+                        + "\n\t|          |"
+                        + "\n\t|          O"
+                        + "\n\t|         /|" 
+                        + "\n\t|          |"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n");
+            break;
+        case 4:
+            System.out.println("\t------------"
+                        + "\n\t|          |"
+                        + "\n\t|          |"
+                        + "\n\t|          O"
+                        + "\n\t|         /|\\" 
+                        + "\n\t|          |"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n");
+            break;
+        case 5: 
+            System.out.println("\t------------"
+                        + "\n\t|          |"
+                        + "\n\t|          |"
+                        + "\n\t|          O"
+                        + "\n\t|         /|\\" 
+                        + "\n\t|          |"
+                        + "\n\t|         /"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n");
+            break;  
+        case 6:
+            System.out.println("\t------------"
+                        + "\n\t|          |"
+                        + "\n\t|          |"
+                        + "\n\t|          O"
+                        + "\n\t|         /|\\" 
+                        + "\n\t|          |"
+                        + "\n\t|          /\\"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n\t|"
+                        + "\n");
+            break;
+        default: System.out.println();
+        
+    }    
 }
+}
+

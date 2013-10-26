@@ -109,17 +109,21 @@ public class Game {
         //Ask for word
         myWord = new AskForWord();
         myWord.displayMysteryWord();
+        Body displayBody = new Body();
         
         
         //TODO: Add loop that continues until (numGuess >= numTurns) is reached
         String turnNum = "";// StringBuilder would be more efficient.
         while (numGuesses <= numTurns) {
+            
             guessedLetter = myGuessedLetter.getGuess();
             numGuesses++;
             if (!letterFound(guessedLetter)) {
                 //TODO: Show body part                
             }
             //TODO: display the updated mystery word (spaced with guessed letters)
+            
+            displayBody.Body(numGuesses);
             myWord.displayMysteryWord();
         }
                 
@@ -156,6 +160,5 @@ public class Game {
     }
     return matchFound;
  } 
-    
     
 }
