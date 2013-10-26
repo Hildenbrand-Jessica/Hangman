@@ -113,6 +113,7 @@ public class Game {
         
         
         //TODO: Add loop that continues until (numGuess >= numTurns) is reached
+        //Brescia Added Display Body/numGuesses to display hangman Body
         String turnNum = "";// StringBuilder would be more efficient.
         while (numGuesses <= numTurns) {
             

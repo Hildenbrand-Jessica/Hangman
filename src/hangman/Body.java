@@ -8,9 +8,11 @@ package hangman;
  *
  * @author hyrumandbrescia
  */
+
 public class Body {
 
 public static void Body(int numberOfGuess) {
+    //Brescia added switch statement to display the hangman body
 
     switch(numberOfGuess){
 
