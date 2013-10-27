@@ -28,6 +28,7 @@ public class Game {
     
     AskForWord myWord;
 
+
     //Constructor
     public Game() {
         numGuesses = 0;
@@ -161,5 +162,18 @@ public class Game {
     }
     return matchFound;
  } 
-    
+ 
+ //Jessica added this function so the alphabet would be displayed for the players  
+ public void alphabet() {
+ char arrayAlphabet[] = new char[26];
+        char a;
+ char place = 'a';
+ for (int i = 0; i < arrayAlphabet.length; i++) {
+     
+     arrayAlphabet[i] = place;
+     System.out.print(arrayAlphabet[i]);
+     place++;
+}
+ 
+ }
 }

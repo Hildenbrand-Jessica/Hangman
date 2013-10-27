@@ -36,7 +36,7 @@ public class Hangman {
     public static void main(String[] args) {
 
         Hangman myGame = new Hangman();
-        myGame.getName();        
+        myGame.getName(); 
         mainMenu.getInput(null);
         GuessedLetters myGuessedLetters = new GuessedLetters();
         myGuessedLetters.getGuess();
@@ -50,6 +50,10 @@ public class Hangman {
         myWins.displayNumWins();
         
         Hangman.inFile.close();
+        
+        //Jessica added this so that arrayAlphabet[] would show up on game
+        Game alGame= new Game();
+        alGame.alphabet();
     }
     
 
