@@ -43,7 +43,7 @@ public class Hangman {
         GuessedLetters myGuessedLetters = new GuessedLetters();
         myGuessedLetters.getGuess();
         
-       //myGuessedLetters.checkGuess(myGuessedLetters.getGuess());
+        myGuessedLetters.checkGuess(myGuessedLetters.getGuess());
         
         
         
@@ -56,7 +56,7 @@ public class Hangman {
     }
     //public class AlphaSortingExchange{
         
-        public static void sorter(String name){
+        public void sorter(String name){
              char[] nameArray;
              nameArray = name.toCharArray();
              sortStringExchange (nameArray);
@@ -65,7 +65,7 @@ public class Hangman {
              }
         }
 
-        public static void sortStringExchange(char nameArray[]){
+        public void sortStringExchange(char nameArray[]){
              int k, j;
              char temp;
 
@@ -81,9 +81,7 @@ public class Hangman {
              } 
          } 
         
-//}
-
-    public void displayHelp() {
+   public void displayHelp() {
      
     }
 }
