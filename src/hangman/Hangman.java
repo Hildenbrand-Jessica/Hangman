@@ -38,12 +38,12 @@ public class Hangman {
 
         Hangman myGame = new Hangman();
         myGame.getName(); 
-        myGame.sorter(name);
+        myGame.sorter();
         mainMenu.getInput(null);
         GuessedLetters myGuessedLetters = new GuessedLetters();
         myGuessedLetters.getGuess();
         
-        myGuessedLetters.checkGuess(myGuessedLetters.getGuess());
+        //myGuessedLetters.checkGuess(myGuessedLetters.getGuess());
         
         
         
@@ -56,11 +56,11 @@ public class Hangman {
     }
     //public class AlphaSortingExchange{
         
-        public void sorter(String name){
+        public void sorter(){
              char[] nameArray;
-             nameArray = name.toCharArray();
+             nameArray = this.name.toCharArray();
              sortStringExchange (nameArray);
-             for ( int i = 0;  i <= name.length() ;  i++ ){
+             for ( int i = 0;  i <= this.name.length() ;  i++ ){
                 System.out.println( nameArray [ i ] );
              }
         }
@@ -71,7 +71,7 @@ public class Hangman {
 
             for (k = 0;  k < nameArray.length - 1;  k++){
                 for ( j = k + 1;  j < nameArray.length;  j++ ){  
-                   if(nameArray [k] < nameArray [j]){
+                   if(nameArray [k] > nameArray [j]){
                          temp = nameArray [k];
                          nameArray [k] = nameArray [ j ];    // swapping
                          nameArray [j] = temp; 
