@@ -38,7 +38,6 @@ public class Hangman {
 
         Hangman myGame = new Hangman();
         myGame.getName(); 
-        myGame.sorter();
         mainMenu.getInput(null);
         GuessedLetters myGuessedLetters = new GuessedLetters();
         myGuessedLetters.getGuess();
@@ -53,6 +52,10 @@ public class Hangman {
         myWins.displayNumWins();
         
         Hangman.inFile.close();
+        
+        //Jessica added this so that arrayAlphabet[] would show up on game
+        Game alGame= new Game();
+        alGame.alphabet();
     }
     //public class AlphaSortingExchange{
         
@@ -84,4 +87,30 @@ public class Hangman {
    public void displayHelp() {
      
     }
+    
+
+    public void sorter(){
+             char[] nameArray;
+             nameArray = this.name.toCharArray();
+             sortStringExchange (nameArray);
+             for ( int i = 0;  i <= this.name.length() ;  i++ ){
+                System.out.println( nameArray [ i ] );
+             }
+        }
+ 
+        public void sortStringExchange(char nameArray[]){
+             int k, j;
+             char temp;
+ 
+            for (k = 0;  k < nameArray.length - 1;  k++){
+                for ( j = k + 1;  j < nameArray.length;  j++ ){ 
+                   if(nameArray[k]>nameArray[j]){
+                         temp = nameArray [k];
+                         nameArray [k] = nameArray [ j ];    // swapping
+                         nameArray [j] = temp;
+ 
+                         }
+                 }
+             }
+         }
 }
