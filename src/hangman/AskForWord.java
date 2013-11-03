@@ -14,6 +14,8 @@ public class AskForWord {
     char[] wordArray;
     char[] mysteryArray;
     int spaces;
+    int vowelCount;
+    int consonantCount;
     
   //  Determines the difficulty level and calls from Main Menu Control class
   //  int numberOfGuesses = startGame;
@@ -55,7 +57,8 @@ public class AskForWord {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your hangman word: ");
         //casting
-        hangmanWord = input.next(); 
+        hangmanWord = input.next();
+        hangmanWord = hangmanWord.toLowerCase();
         
         
         
@@ -77,6 +80,22 @@ public class AskForWord {
     
     public char[] mysteryArray(){
         return mysteryArray;
+    }
+    
+    public void vowelConsonantCounter(){
+        int i;
+        for(i=0; i<=wordArray.length; i++){
+               if(wordArray[i]=='a'||wordArray[i]=='e'||wordArray[i]=='i'||wordArray[i]=='o'||wordArray[i]=='u'){
+                   vowelCount++;
+               }
+           }
+        for(i=0; i<=wordArray.length; i++){
+               if(wordArray[i]!='a'&&wordArray[i]!='e'&&wordArray[i]!='i'&&wordArray[i]!='o'&&wordArray[i]!='u'){
+                   consonantCount++;
+               }
+           }
+        System.out.print("Your word has " + vowelCount + "vowels \n" + "Your word has " + consonantCount + "consonants \n");
+        System.out.print("Your word has " + vowelCount + consonantCount + "letters.");
     }
     
 }

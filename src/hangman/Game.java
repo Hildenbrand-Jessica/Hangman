@@ -109,10 +109,10 @@ public class Game {
         
         //Ask for word
         myWord = new AskForWord();
+        myWord.vowelConsonantCounter();
         myWord.displayMysteryWord();
         Body displayBody = new Body();
-        
-        
+       
         //TODO: Add loop that continues until (numGuess >= numTurns) is reached
         //Brescia Added Display Body/numGuesses to display hangman Body
         String turnNum = "";// StringBuilder would be more efficient.
