@@ -83,6 +83,7 @@ public class AskForWord {
     }
     
     public void vowelConsonantCounter(){
+        /*
         int i;
         for(i=0; i<=wordArray.length; i++){
                if(wordArray[i]=='a'||wordArray[i]=='e'||wordArray[i]=='i'||wordArray[i]=='o'||wordArray[i]=='u'){
@@ -96,8 +97,9 @@ public class AskForWord {
            }
         System.out.print("Your word has " + vowelCount + "vowels \n" + "Your word has " + consonantCount + "consonants \n");
         System.out.print("Your word has " + vowelCount + consonantCount + "letters.");
-    }
+    }*/
     
+}
 }
     
 

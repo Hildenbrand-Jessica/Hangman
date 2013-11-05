@@ -1,6 +1,8 @@
 
 package hangman;
 
+import java.util.Arrays;
+
 /**
  *
  * @author jessicahildenbrand
@@ -117,10 +119,14 @@ public class Game {
         //Brescia Added Display Body/numGuesses to display hangman Body
         String turnNum = "";// StringBuilder would be more efficient.
         while (numGuesses <= numTurns) {
-            
+            //convert character to string
+           if(Arrays.equals(myWord.wordArray, myWord.mysteryArray))
+           break;
+            //if true declare winner and display winning message
             guessedLetter = myGuessedLetter.getGuess();
-            numGuesses++;
+            
             if (!letterFound(guessedLetter)) {
+                numGuesses++;
                 //TODO: Show body part                
             }
             //TODO: display the updated mystery word (spaced with guessed letters)
