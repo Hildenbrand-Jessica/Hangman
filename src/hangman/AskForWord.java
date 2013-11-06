@@ -83,23 +83,23 @@ public class AskForWord {
     }
     
     public void vowelConsonantCounter(){
-        /*
+ 
         int i;
-        for(i=0; i<=wordArray.length; i++){
+        for(i=0; i< wordArray.length; i++){
                if(wordArray[i]=='a'||wordArray[i]=='e'||wordArray[i]=='i'||wordArray[i]=='o'||wordArray[i]=='u'){
                    vowelCount++;
                }
            }
-        for(i=0; i<=wordArray.length; i++){
+        for(i=0; i< wordArray.length; i++){
                if(wordArray[i]!='a'&&wordArray[i]!='e'&&wordArray[i]!='i'&&wordArray[i]!='o'&&wordArray[i]!='u'){
                    consonantCount++;
                }
            }
         System.out.print("Your word has " + vowelCount + "vowels \n" + "Your word has " + consonantCount + "consonants \n");
         System.out.print("Your word has " + vowelCount + consonantCount + "letters.");
-    }*/
+    }
     
 }
-}
+
     
 
