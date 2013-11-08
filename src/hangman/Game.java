@@ -28,14 +28,31 @@ public class Game {
     private int numTurns;
     private int numGuesses;
     
+    private char arrayAlphabet[];
+
+    
     AskForWord myWord;
 
 
     //Constructor
     public Game() {
         numGuesses = 0;
+        
+        //Initialize alphabet array
+        System.out.print("Initializing alphabet...\n");
+        arrayAlphabet = new char[26];
+        char a;
+        char place = 'a';
+        for (int i = 0; i < arrayAlphabet.length; i++) {
+            arrayAlphabet[i] = place;
+            System.out.print(arrayAlphabet[i]);
+            place++;
+       }
+        
+       System.out.print("Done.\n"); 
     }
 
+    //Brother Weibell: Probably don't need this constructor
     public Game(String gameType) {
         this();
 
@@ -124,10 +141,18 @@ public class Game {
            break;
             //if true declare winner and display winning message
             guessedLetter = myGuessedLetter.getGuess();
+            numGuesses++;
+
+            //TODO: mark off letter guess in arrayAlphabet
+            //updateArrayAlphabet(guessedLetter);
+            
+            //Show updated alphabet
+            showRemainingAlphabet();
             
             if (!letterFound(guessedLetter)) {
-                numGuesses++;
-                //TODO: Show body part                
+                
+                //TODO: Show body part     
+                System.out.print("Letter not found");
             }
             //TODO: display the updated mystery word (spaced with guessed letters)
             
@@ -170,16 +195,11 @@ public class Game {
  } 
  
  //Jessica added this function so the alphabet would be displayed for the players  
- public void alphabet() {
- char arrayAlphabet[] = new char[26];
-        char a;
- char place = 'a';
- for (int i = 0; i < arrayAlphabet.length; i++) {
-     
-     arrayAlphabet[i] = place;
-     System.out.print(arrayAlphabet[i]);
-     place++;
-}
- 
+ public void showRemainingAlphabet() {
+     System.out.print("Remaining alphabet letters:\n");
+     for (int i = 0; i < arrayAlphabet.length; i++) {
+         System.out.print(arrayAlphabet[i]);
+    }
+    System.out.print("\n--------------------\n");     
  }
 }

@@ -40,8 +40,8 @@ public class Hangman {
         myGame.getName(); 
         myGame.sorter();
         mainMenu.getInput(null);
-        GuessedLetters myGuessedLetters = new GuessedLetters();
-        myGuessedLetters.getGuess();
+        //GuessedLetters myGuessedLetters = new GuessedLetters();
+        //myGuessedLetters.getGuess();
         
         //myGuessedLetters.checkGuess(myGuessedLetters.getGuess());
         
@@ -55,8 +55,8 @@ public class Hangman {
         Hangman.inFile.close();
         
         //Jessica added this so that arrayAlphabet[] would show up on game
-        Game alGame= new Game();
-        alGame.alphabet();
+        //Game alGame= new Game();
+        //alGame.alphabet();
     }
         
    public void displayHelp() {
