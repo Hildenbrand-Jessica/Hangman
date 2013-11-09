@@ -15,7 +15,7 @@ public class Losses {
         numLosses= 3+3;
     }
     public void displayNumLosses() {
-        System.out.println ("You have " + this.numLosses + " losses.");
+        System.out.println ("You loose, better luck next time.");
 }
     
 }

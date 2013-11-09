@@ -9,7 +9,7 @@ public class Wins {
     
     public Wins() {
         for (int i: numWins)  {
-            System.out.println("You have " + i + " wins!");
+            System.out.println("You Win!");
             total += i;
             if (i==6) break;
     }

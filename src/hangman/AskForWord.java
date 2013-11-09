@@ -96,7 +96,6 @@ public class AskForWord {
                }
            }
         System.out.print("Your word has " + vowelCount + "vowels \n" + "Your word has " + consonantCount + "consonants \n");
-        System.out.print("Your word has " + vowelCount + consonantCount + "letters.");
     }
     
 }
