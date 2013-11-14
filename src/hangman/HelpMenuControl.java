@@ -50,7 +50,7 @@ public class HelpMenuControl {
     }
     
                    
-    public void displaySecretWordHelp() {
+   public void displaySecretWordHelp() {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
@@ -59,17 +59,7 @@ public class HelpMenuControl {
                 ); 
         displayHelpBorder();
     }
-             
-    public void displayLetterholderHelp() {
-        System.out.println();
-        displayHelpBorder();     
-        System.out.println( 
-               "\tThe alphabet will be displayed. As letters are guessed, "
-                +"\n\tthey will disappear from the alphabet so they are not "
-                +"\n\tguessed more than once. "
-                ); 
-        displayHelpBorder();
-    }
+          
     
     public void displayHelpBorder() {       
         System.out.println(

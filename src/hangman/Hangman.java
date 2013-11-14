@@ -47,8 +47,8 @@ public class Hangman {
         
         
         
-        Losses myLosses = new Losses();
-        myLosses.displayNumLosses();
+        Loose myLosses = new Loose();
+        myLosses.displayNumLoose();
         Wins myWins = new Wins();
         myWins.displayNumWins();
         

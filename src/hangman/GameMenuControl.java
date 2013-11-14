@@ -7,23 +7,14 @@ package hangman;
  */
 public class GameMenuControl {
     private Game game;
-    private Board board;
 
-   
-    
+  
    public void takeTurn() {
         System.out.println("\n\ttakeTurn() called");
-    }
-   
-       
-   public void displayBoard() {
-        System.out.println("\n\tdisplayBoard() called");
-    }
-   
+   }
    
     public void startNewGame() {
         System.out.println("\n\tstartNewGame() called");
-        this.displayBoard();
     }
     
     

@@ -16,14 +16,15 @@ public class Game {
     public static final String QUIT = "QUIT"; 
     public static final String ERROR = "ERROR";
     public static final String EXIT = "EXIT";
+    
+    
+    /*public Player otherPlayer;
+    public Player winner;
+    public Player loser;
+    public String status;*/
 
     private String gameType;
-    private Player currentPlayer;
-    private Player otherPlayer;
-    private Player winner;
-    private Player loser;
-    private String status;
-    private Board board;
+   
     
     private int numTurns;
     private int numGuesses;
@@ -52,14 +53,6 @@ public class Game {
        System.out.print("Done.\n"); 
     }
 
-    //Brother Weibell: Probably don't need this constructor
-    public Game(String gameType) {
-        this();
-
-        this.gameType = gameType;
-        
-    }
-
     public String getGameType() {
         return gameType;
     }
@@ -68,54 +61,12 @@ public class Game {
         this.gameType = gameType;
     }
 
-    public Player getCurrentPlayer() {
-        return currentPlayer;
-    }
-
-    public void setCurrentPlayer(Player currentPlayer) {
-        this.currentPlayer = currentPlayer;
-    }
-
-    public Player getOtherPlayer() {
-        return otherPlayer;
-    }
-
-    public void setOtherPlayer(Player otherPlayer) {
-        this.otherPlayer = otherPlayer;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     public int getNumTurns() {
         return numTurns;
     }
 
     public void setNumTurns(int numTurns) {
         this.numTurns = numTurns;
-    }
-
-    
-    public Player getWinner() {
-        return winner;
-    }
-
-    public void setWinner(Player winner) {
-        this.winner = winner;
-    }
-
-    public Player getLoser() {
-        return loser;
-    }
-
-    public void setLoser(Player loser) {
-        this.loser = loser;
-
     }
 
     public void startGame(int numTurns) {
@@ -161,13 +112,6 @@ public class Game {
         }
                 
         
-    }
-
-    public String getWinningMessage () {
-        return "\n\t*******************************************************************************"
-             + "\n\t Congratulations " + winner.getName() + "! You won the game."
-             + "\n\t Sorry " + loser.getName() + ", You are the loser." 
-             + "\n\t*******************************************************************************";
     }
 
     public String getTiedMessage () {

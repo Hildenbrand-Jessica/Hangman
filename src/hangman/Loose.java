@@ -8,13 +8,13 @@ package hangman;
  *
  * @author jessicahildenbrand
  */
-public class Losses {
-    int numLosses;
+public class Loose {
+    int numLoose;
     
-    public Losses() {
-        numLosses= 3+3;
+    public Loose() {
+        numLoose= 3+3;
     }
-    public void displayNumLosses() {
+    public void displayNumLoose() {
         System.out.println ("You loose, better luck next time.");
 }
     
