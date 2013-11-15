@@ -4,18 +4,64 @@
  */
 package hangman;
 
+import java.io.Serializable;
 import java.util.Scanner;
 /**
  *
  * @author jessicahildenbrand
  */
-public class AskForWord {
+public class AskForWord implements Serializable{
     String inputWord = getWord();
     char[] wordArray;
     char[] mysteryArray;
     int spaces;
     int vowelCount;
     int consonantCount;
+
+    //Added Getter and Setter Functions
+    public String getInputWord() {
+        return inputWord;
+    }
+
+    public void setInputWord(String inputWord) {
+        this.inputWord = inputWord;
+    }
+
+    public char[] getWordArray() {
+        return wordArray;
+    }
+
+    public void setWordArray(char[] wordArray) {
+        this.wordArray = wordArray;
+    }
+
+    public char[] getMysteryArray() {
+        return mysteryArray;
+    }
+
+    public void setMysteryArray(char[] mysteryArray) {
+        this.mysteryArray = mysteryArray;
+    }
+
+    public void setSpaces(int spaces) {
+        this.spaces = spaces;
+    }
+
+    public int getVowelCount() {
+        return vowelCount;
+    }
+
+    public void setVowelCount(int vowelCount) {
+        this.vowelCount = vowelCount;
+    }
+
+    public int getConsonantCount() {
+        return consonantCount;
+    }
+
+    public void setConsonantCount(int consonantCount) {
+        this.consonantCount = consonantCount;
+    }
     
   //  Determines the difficulty level and calls from Main Menu Control class
   //  int numberOfGuesses = startGame;

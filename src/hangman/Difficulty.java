@@ -4,16 +4,33 @@
  */
 package hangman;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author hyrumandbrescia
  */
-public class Difficulty {
+public class Difficulty implements Serializable{
 
-    Game game;
-    String difficulty;
+    private Game game;
+    private String difficulty;
+
+    //Constructor Added
+    private Difficulty() {
+    }
+    //Added Getter and Setter Functions
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
     
 public void startGame(String difficulty){
     
@@ -46,11 +63,6 @@ public void getDifficulty() {
     }; 
   //added the Difficulty so that it connects to the class that Brescia will create
     Difficulty mmc = new Difficulty();
-    
-    
-    public Difficulty() {
-
-    }
  
     
     public String getInput(Object object) {       

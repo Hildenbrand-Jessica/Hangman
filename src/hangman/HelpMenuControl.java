@@ -3,12 +3,12 @@
  *
  * @author hyrumandbrescia
  */
-
-
 package hangman;
 
+import java.io.Serializable;
 
-public class HelpMenuControl {
+
+public class HelpMenuControl implements Serializable{
     
        public HelpMenuControl() {
         

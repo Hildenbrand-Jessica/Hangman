@@ -5,12 +5,14 @@
  */
 package hangman;
 
+import java.io.Serializable;
+
 /**
  *
  * @author hyrumandbrescia
  */
 
-public class Body {
+public class Body implements Serializable{
 
 public static void Body(int numberOfGuess) {
     //Brescia added switch statement to display the hangman body

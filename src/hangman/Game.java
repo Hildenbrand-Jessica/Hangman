@@ -1,13 +1,14 @@
 
 package hangman;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  *
  * @author jessicahildenbrand
  */
-public class Game {
+public class Game implements Serializable{
     
     public static final String CONTINUE = "CONTINUE";
     public static final String NEW_GAME = "NEW_GAME";
@@ -17,18 +18,10 @@ public class Game {
     public static final String ERROR = "ERROR";
     public static final String EXIT = "EXIT";
     
-    
-    /*public Player otherPlayer;
-    public Player winner;
-    public Player loser;
-    public String status;*/
-
+//Private variables
     private String gameType;
-   
-    
     private int numTurns;
     private int numGuesses;
-    
     private char arrayAlphabet[];
 
     
@@ -52,7 +45,7 @@ public class Game {
         
        System.out.print("Done.\n"); 
     }
-
+//Added Getter and setter functions
     public String getGameType() {
         return gameType;
     }

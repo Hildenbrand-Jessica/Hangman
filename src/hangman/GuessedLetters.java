@@ -4,19 +4,29 @@
  */
 package hangman;
 
+import java.io.Serializable;
 import java.util.Scanner;
-
 /**
  *
  * @author hyrumandbrescia
  */
-public class GuessedLetters {
+
+public class GuessedLetters implements Serializable {
     String repeatedLetters;
     String guess;
     
     //Class constructor
     public GuessedLetters(){
-        repeatedLetters = "You have already guessed this letter";
+         repeatedLetters = "You have already guessed this letter";
+    }
+    
+//Getter and Setter Functions
+    public String getRepeatedLetters() {
+        return repeatedLetters;
+    }
+
+    public void setRepeatedLetters(String repeatedLetters) {
+        this.repeatedLetters = repeatedLetters;
     }
     
    //Prints out guess a letter will eventually use it to 
@@ -33,6 +43,9 @@ public class GuessedLetters {
     return letter;
 } 
 
+    public void setGuess(String guess) {
+        this.guess = guess;
+    }
 }
      
 

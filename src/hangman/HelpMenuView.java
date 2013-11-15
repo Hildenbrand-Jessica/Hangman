@@ -1,9 +1,10 @@
 
 package hangman;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class HelpMenuView {
+public class HelpMenuView implements Serializable{
     
     
     

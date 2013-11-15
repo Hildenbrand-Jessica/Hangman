@@ -4,13 +4,16 @@
  */
 package hangman;
 
+import java.io.Serializable;
+
 /**
  *
  * @author jessicahildenbrand
  */
-public class Loose {
+public class Loose implements Serializable {
     int numLoose;
     
+    //Constructor Added
     public Loose() {
         numLoose= 3+3;
     }

@@ -1,12 +1,26 @@
 
 package hangman;
 
+import java.io.Serializable;
+
 /**
  *
  * @author jessicahildenbrand
  */
-public class GameMenuControl {
+public class GameMenuControl implements Serializable{
     private Game game;
+
+    //Class Constructor
+    private GameMenuControl() {
+    }
+//Added Getter and Setter functions
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
 
   
    public void takeTurn() {
