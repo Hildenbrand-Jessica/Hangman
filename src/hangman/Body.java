@@ -14,6 +14,14 @@ import java.io.Serializable;
 
 public class Body implements Serializable{
 
+//Jessica added the main constructor
+public Body() {
+    
+    }
+
+    
+    
+
 public static void Body(int numberOfGuess) {
     //Brescia added switch statement to display the hangman body
 
