@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class Hangman {
     
-    //jessicahildenbrand added these three lines
+    //jessicahildenbrand added these two lines
     private static final Scanner inFile= new Scanner(System.in);
     private static final HelpMenuView helpMenu = new HelpMenuView();
-    private static final MainMenuView mainMenu = new MainMenuView();
+    private static final MainMenuView mainMenu = MainMenuView();
+
 
     public static Scanner getInputFile() {
         return Hangman.inFile;
@@ -47,8 +48,8 @@ public class Hangman {
         
         
         
-        Loose myLosses = new Loose();
-        myLosses.displayNumLoose();
+        Lose myLosses = new Lose();
+        myLosses.displayNumLose();
         Wins myWins = new Wins();
         myWins.displayNumWins();
         

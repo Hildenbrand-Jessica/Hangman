@@ -10,15 +10,15 @@ import java.io.Serializable;
  *
  * @author jessicahildenbrand
  */
-public class Loose implements Serializable {
-    int numLoose;
+public class Lose implements Serializable {
+    int numLose;
     
     //Constructor Added
-    public Loose() {
-        numLoose= 3+3;
+    public Lose() {
+        numLose= 3+3;
     }
-    public void displayNumLoose() {
-        System.out.println ("You loose, better luck next time.");
+    public void displayNumLose() {
+        System.out.println ("You lose, better luck next time.");
 }
     
 }
