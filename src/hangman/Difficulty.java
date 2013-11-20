@@ -11,13 +11,14 @@ import java.util.Scanner;
  *
  * @author hyrumandbrescia
  */
-public class Difficulty implements Serializable{
+public class Difficulty extends Menu implements Serializable{
 
     private Game game;
     private String difficulty;
 
     //Constructor Added
-    private Difficulty() {
+    public Difficulty() {
+        super(Difficulty.menuItems);
     }
     //Added Getter and Setter Functions
     public Game getGame() {
@@ -112,9 +113,9 @@ public void getDifficulty() {
         } while (!valid);
         
         return command;
-    }
-    
-    
+    } 
+   
+   @Override 
    public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");

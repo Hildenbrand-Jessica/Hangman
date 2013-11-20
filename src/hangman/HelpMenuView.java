@@ -4,9 +4,11 @@ package hangman;
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class HelpMenuView implements Serializable{
+public class HelpMenuView extends Menu implements Serializable{
     
-    
+    public HelpMenuView() {
+        super(HelpMenuView.menuItems);
+    }
     
     private final static String[][] menuItems= {
         {"B", "The board"},
@@ -19,10 +21,6 @@ public class HelpMenuView implements Serializable{
     };
     
     private HelpMenuControl helpMenuControl=new HelpMenuControl();
-    
-    public HelpMenuView() {
-       
-    }
     
     public String getInput() {
         
@@ -55,7 +53,7 @@ public class HelpMenuView implements Serializable{
          return "PLAYING";
     }
     
-    
+    @Override
     public final void display() {
         System.out.println("\nEnter the letter associated with one of the following commands:");
 
