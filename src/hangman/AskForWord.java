@@ -6,17 +6,17 @@ package hangman;
 
 import java.io.Serializable;
 import java.util.Scanner;
-/**
- *
- * @author jessicahildenbrand
- */
+
+
 public class AskForWord implements Serializable{
-    String inputWord = getWord();
-    char[] wordArray;
-    char[] mysteryArray;
-    int spaces;
-    int vowelCount;
-    int consonantCount;
+  String inputWord = getWord();
+  char[] wordArray;
+  char[] mysteryArray;
+  int spaces;
+  int vowelCount;
+  int consonantCount;
+
+
 
     //Added Getter and Setter Functions
     public String getInputWord() {
@@ -35,11 +35,11 @@ public class AskForWord implements Serializable{
         this.wordArray = wordArray;
     }
 
-    public char[] getMysteryArray() {
+    private char[] getMysteryArray() {
         return mysteryArray;
     }
 
-    public void setMysteryArray(char[] mysteryArray) {
+    private void setMysteryArray(char[] mysteryArray) {
         this.mysteryArray = mysteryArray;
     }
 
@@ -65,6 +65,7 @@ public class AskForWord implements Serializable{
     
   //  Determines the difficulty level and calls from Main Menu Control class
   //  int numberOfGuesses = startGame;
+    
     
     public AskForWord(){
         wordArray = inputWord.toCharArray();

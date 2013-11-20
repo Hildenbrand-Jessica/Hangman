@@ -17,6 +17,32 @@ public class Wins implements Serializable {
        System.out.print(encourage);   
         
     }
+
+    public int[] getNumWins() {
+        return numWins;
+    }
+
+    public void setNumWins(int[] numWins) {
+        this.numWins = numWins;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public String getEncourage() {
+        return encourage;
+    }
+
+    public void setEncourage(String encourage) {
+        this.encourage = encourage;
+    }
+    
+    
     public void displayNumWins() {
         
         System.out.print("\n\n");

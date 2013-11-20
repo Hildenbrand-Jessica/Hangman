@@ -13,6 +13,7 @@ import java.util.Scanner;
  */
 public class Difficulty extends Menu implements Serializable{
 
+    //variables are set to private
     private Game game;
     private String difficulty;
 
