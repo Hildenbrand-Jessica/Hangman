@@ -7,7 +7,7 @@ public class Hangman {
     //jessicahildenbrand added these two lines
     private static final Scanner inFile= new Scanner(System.in);
     private static final HelpMenuView helpMenu = new HelpMenuView();
-    private static final MainMenuView mainMenu = MainMenuView();
+    private static final Difficulty difficulty = new Difficulty();
 
 
     public static Scanner getInputFile() {
@@ -40,7 +40,7 @@ public class Hangman {
         Hangman myGame = new Hangman();
         myGame.getName(); 
         myGame.sorter();
-        mainMenu.getInput(null);
+        difficulty.getInput(null);
         //GuessedLetters myGuessedLetters = new GuessedLetters();
         //myGuessedLetters.getGuess();
         

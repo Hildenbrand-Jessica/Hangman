@@ -9,6 +9,24 @@ package hangman;
  * @author hyrumandbrescia
  */
 public abstract class Menu {
-    public menuItems = null;
-      public abstract String display();
+   
+    public String [][] menuItems = null;
+    
+    public Menu() {
+    }
+    
+    public Menu(String[][] menuItems) {
+        this();
+        this.menuItems = menuItems;
+    }
+
+    public String[][] getMenuItems() {
+        return menuItems;
+    }
+
+    public void setMenuItems(String[][] menuItems) {
+        this.menuItems = menuItems;
+    }
+ 
+      public abstract void display();
 }
