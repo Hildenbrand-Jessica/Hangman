@@ -23,6 +23,7 @@ public class Game implements Serializable{
     private int numTurns;
     private int numGuesses;
     private char arrayAlphabet[];
+    private int numWrongGuesses;
 
     
     AskForWord myWord;
@@ -31,7 +32,7 @@ public class Game implements Serializable{
     //Constructor
     public Game() {
         numGuesses = 0;
-        
+        numWrongGuesses=0;
         //Initialize alphabet array
         System.out.print("Initializing alphabet...\n");
         arrayAlphabet = new char[26];
@@ -94,13 +95,13 @@ public class Game implements Serializable{
             showRemainingAlphabet();
             
             if (!letterFound(guessedLetter)) {
-                
+                numWrongGuesses++;
                 //TODO: Show body part     
                 System.out.print("Letter not found");
             }
             //TODO: display the updated mystery word (spaced with guessed letters)
             
-            displayBody.Body(numGuesses);
+            Body.displayBody(numWrongGuesses);
             myWord.displayMysteryWord();
         }
                 

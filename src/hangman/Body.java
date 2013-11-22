@@ -22,7 +22,7 @@ public Body() {
     
     
 
-public static void Body(int numberOfGuess) {
+public static void displayBody(int numberOfGuess) {
     //Brescia added switch statement to display the hangman body
 
     switch(numberOfGuess){

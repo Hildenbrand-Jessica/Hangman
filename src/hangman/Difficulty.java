@@ -64,7 +64,7 @@ public void getDifficulty() {
         {"X", "Exit Hangman"}
     }; 
   //added the Difficulty so that it connects to the class that Brescia will create
-    Difficulty mmc = new Difficulty();
+    //Difficulty mmc = new Difficulty();
  
     
     public String getInput(Object object) {       
@@ -76,13 +76,13 @@ public void getDifficulty() {
             String command = this.getCommand();
             switch (command) {
                 case "E":
-                    this.mmc.startGame("E");                    
+                    this.startGame("E");                    
                     return Game.EXIT;
                 case "M":
-                    this.mmc.startGame("M");
+                    this.startGame("M");
                     return Game.EXIT;
                 case "D":
-                    this.mmc.startGame("D");
+                    this.startGame("D");
                     return Game.EXIT; 
                 case "H":
                     HelpMenuView helpMenu = Hangman.getHelpMenu();
