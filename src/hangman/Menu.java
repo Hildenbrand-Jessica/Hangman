@@ -29,4 +29,12 @@ public abstract class Menu {
     }
  
       public abstract void display();
+      
+      public interface DisplayInfo{
+          
+      }
+      public interface EnterInfo{
+          
+      }
+      
 }
