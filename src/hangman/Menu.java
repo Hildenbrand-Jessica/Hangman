@@ -8,7 +8,7 @@ package hangman;
  *
  * @author hyrumandbrescia
  */
-public abstract class Menu {
+public abstract class Menu inplements DisplayInfo{
    
     public String [][] menuItems = null;
     
