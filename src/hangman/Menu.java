@@ -8,7 +8,7 @@ package hangman;
  *
  * @author hyrumandbrescia
  */
-public abstract class Menu inplements DisplayInfo{
+public abstract class Menu inplements DisplayInfo {
    
     public String [][] menuItems = null;
     
@@ -36,5 +36,15 @@ public abstract class Menu inplements DisplayInfo{
       public interface EnterInfo{
           
       }
+      
+      /*        public boolean occupyLocation(Player player, String[] coordinates) throws MenuException {
+        Location location = this.getLocation(coordinates);
+        
+        if (location.getPlayer() !=null) {
+            throw new MenuException("This location is already taken");
+        }
+        location.setPlayer(player);
+        return true;
+    }*/
       
 }
