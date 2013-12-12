@@ -126,6 +126,11 @@ public void getDifficulty() {
         }
         System.out.println("\t===============================================================\n");
     }
+   
+   @Override
+   public void enter(){
+       
+   }
 
     private boolean validCommand(String command) {
         String[][] items = Difficulty.menuItems;
@@ -137,6 +142,7 @@ public void getDifficulty() {
         }
         return false;
     }
+    
     
    
     

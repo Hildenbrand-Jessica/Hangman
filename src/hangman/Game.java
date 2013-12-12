@@ -141,12 +141,16 @@ arrayAlphabet[letter] = '_';
         }
         System.out.print("\n--------------------\n");
     }
-   /* if (numGuesses >= numTurns) {
+    
+    public void WinLoose(){
+     if (numGuesses >= numTurns) {
             System.out.println(playerLooses());
 }
         else{
             System.out.println(playerWins());
-        }*/
+        }
+    }
+        
     public static String playerLooses() {
         return "Sorry you lost, better luck next time!";
     }

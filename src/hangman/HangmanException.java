@@ -14,7 +14,7 @@ public class HangmanException extends Exception {
     
     }
     
-    public HangmanException(String mesage) {
+    public HangmanException(String message) {
         super(message);
     }
     

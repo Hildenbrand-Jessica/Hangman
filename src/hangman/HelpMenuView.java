@@ -1,18 +1,27 @@
 
 package hangman;
 
+import citbyui.cit260.hangman.enums.*;
 import java.io.Serializable;
 import java.util.Scanner;
 
+
 public class HelpMenuView extends Menu implements Serializable{
+    private static final String BOARD = "B";
+    private static final String GAME = "G";
+    private static final String LETTER_HOLDER = "L";
+    private static final String REG_PLAYER = "R";
+    private static final String SECRET_WORD = "S";
+    private static final String QUIT = "Q";
+    
     
     public HelpMenuView() {
         super(HelpMenuView.menuItems);
     }
     
     private final static String[][] menuItems= {
-        {"B", "The board"},
-        {"G", "The Hangman game"},
+        {"B", "Board"},
+        {"G", "Game"},
         {"L", "Letter holder"},
         {"R", "A regular player"},
         {"S", "Secret word"},
@@ -30,22 +39,22 @@ public class HelpMenuView extends Menu implements Serializable{
             
             command=this.getCommand();
             switch (command) {
-                case BOARD:
+                case GameStatus.BOARD:
                     this.helpMenuControl.displayBoardHelp();
                     break;
-                case GAME:
+                case GameStatus.GAME:
                     this.helpMenuControl.displayGameHelp();
                     break; 
-                 case LETTER_HOLDER:
+                 case GameStatus.LETTER_HOLDER:
                     this.helpMenuControl.displayGameHelp();
                     break;
-                 case REG_PLAYER:
+                 case GameStatus.REG_PLAYER:
                     this.helpMenuControl.displayRegularPlayerHelp();
                     break; 
-                 case SECRET_WORD:
+                 case GameStatus.SECRET_WORD:
                     this.helpMenuControl.displaySecretWordHelp();
                     break; 
-                case QUIT: 
+                case GameStatus.QUIT: 
                     return "QUIT";
             }
         } while (!command.equals("Q"));  

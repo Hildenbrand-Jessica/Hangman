@@ -1,32 +1,33 @@
 
-
-
 /**
  *
  * @author hyrumandbrescia
  */
 public enum GameStatus {
-   BOARD ("The board"),
-   GAME ("The Hangman game"),
-   LETTER_HOLDER ("Letter holder"),
-   REG_PLAYER ("A regular player"),
-   SECRET_WORD ("Secret word"),
-   QUIT ("Quit Help");
-    
+
+    //BOARD("The board"),
+    BOARD ("B", "The Board"),
+    GAME("G", "The Hangman game"),
+    LETTER_HOLDER("L", "Letter holder"),
+    REG_PLAYER("R", "A regular player"),
+    SECRET_WORD("S", "Secret word"),
+    QUIT("Q", "Quit Help");
     String message;
-            }
-public void GetInput(){
-    command.display();
-}
 
-private GameStatus() {
-    this.message=message;
-}
+    private GameStatus(String Command, String message) {
+        this.message = message;
 
-public String getMessage(){
-    return message;
-}
-public void display(){
-system.out.println(this.message);
-}
+    }
 
+    /*public void GetInput() {
+        command.display();
+    }*/
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void display() {
+        System.out.println(this.message);
+    }
+}
