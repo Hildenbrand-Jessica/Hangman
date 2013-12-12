@@ -9,7 +9,7 @@ package citbyui.cit260.hangman.interfaces;
  * @author hyrumandbrescia
  */
 public interface DisplayInfo {
-   public void display(){
+   public void display();
         
-    }
+    
 }
