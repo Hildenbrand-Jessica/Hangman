@@ -4,11 +4,13 @@
  */
 package hangman;
 
+
+
 /**
  *
  * @author hyrumandbrescia
  */
-public abstract class Menu inplements DisplayInfo {
+public abstract class Menu implements DisplayInfo, EnterInfo {
    
     public String [][] menuItems = null;
     
@@ -31,11 +33,14 @@ public abstract class Menu inplements DisplayInfo {
       public abstract void display();
       
       public interface DisplayInfo{
+          void display();
           
       }
       public interface EnterInfo{
+          public void enter();
           
-      }
+      } 
+
       
       /*        public boolean occupyLocation(Player player, String[] coordinates) throws MenuException {
         Location location = this.getLocation(coordinates);

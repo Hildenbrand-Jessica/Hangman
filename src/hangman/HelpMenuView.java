@@ -54,7 +54,7 @@ public class HelpMenuView extends Menu implements Serializable{
     }
     
     @Override
-    public final void display() {
+    public void display() {
         System.out.println("\nEnter the letter associated with one of the following commands:");
 
         for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
