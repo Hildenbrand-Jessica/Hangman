@@ -4,6 +4,10 @@
  */
 package hangman;
 
+import citbyui.cit260.hangman.interfaces.DisplayInfo;
+import citbyui.cit260.hangman.interfaces.EnterInfo;
+
+
 
 
 /**

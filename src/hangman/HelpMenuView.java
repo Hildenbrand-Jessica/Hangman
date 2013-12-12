@@ -30,22 +30,22 @@ public class HelpMenuView extends Menu implements Serializable{
             
             command=this.getCommand();
             switch (command) {
-                case "B":
+                case BOARD:
                     this.helpMenuControl.displayBoardHelp();
                     break;
-                case "G":
+                case GAME:
                     this.helpMenuControl.displayGameHelp();
                     break; 
-                 case "L":
+                 case LETTER_HOLDER:
                     this.helpMenuControl.displayGameHelp();
                     break;
-                 case "R":
+                 case REG_PLAYER:
                     this.helpMenuControl.displayRegularPlayerHelp();
                     break; 
-                 case "S":
+                 case SECRET_WORD:
                     this.helpMenuControl.displaySecretWordHelp();
                     break; 
-                case "Q": 
+                case QUIT: 
                     return "QUIT";
             }
         } while (!command.equals("Q"));  
