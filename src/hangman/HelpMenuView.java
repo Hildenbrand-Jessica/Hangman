@@ -70,6 +70,10 @@ public class HelpMenuView extends Menu implements Serializable{
             System.out.println("\t" + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
     }
+    @Override
+    public void enter(){
+       
+   }
    protected final String getCommand() {
 
         Scanner inFile = new Scanner(System.in);
