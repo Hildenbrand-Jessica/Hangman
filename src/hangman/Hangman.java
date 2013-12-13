@@ -1,6 +1,7 @@
 package hangman;
 
 import java.util.Scanner;
+import citbyui.cit260.hangman.frames.MainFrame;
 
 public class Hangman {
 
@@ -59,6 +60,28 @@ public class Hangman {
         //Jessica added this so that arrayAlphabet[] would show up on game
         //Game alGame= new Game();
         //alGame.alphabet();
+        
+               Hangman hangman = null;
+        try {  
+            hangman = new Hangman();
+        
+                 java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    Hangman.mainFrame = new MainFrame();
+                    Hangman.mainFrame.setVisible(true);
+                }
+            });
+        } 
+
+        catch (Throwable ex) {     
+            ErrorType.displayErorrMsg("Unexpected error: " + ex.getMessage());
+            ErrorType.displayErorrMsg(ex.getStackTrace().toString());           
+        } 
+        finally {
+            if (Hangman.MainFrame != null) {
+                Hangman.MainFrame.dispose();
+            }
+        }   
     }
 
     /*public static String playerLooses() {
