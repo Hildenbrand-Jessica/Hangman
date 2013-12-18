@@ -31,11 +31,43 @@ public class Hangman {
         this.name = input.next();
 
     }
-
+    
+//MainFraim.java
     public static void main(String[] args) {
 
         Hangman myGame = new Hangman();
         
+//             Hangman hangman =null;
+//        
+//        try {  
+//            hangman = new Hangman();
+//        
+//                 java.awt.EventQueue.invokeLater(new Runnable() {
+//                public void run() {
+//                    Hangman.mainFrame = new MainFrame();
+//                    Hangman.mainFrame.setVisible(true);
+//                }
+//            });
+//        } 
+//
+//        catch (Throwable ex) {     
+//           // ErrorType.displayErorrMsg("Unexpected error: " + ex.getMessage());
+//           //ErrorType.displayErorrMsg(ex.getStackTrace().toString());           
+//        } 
+//        finally {
+//            if (Hangman.mainFrame != null) {
+//                Hangman.mainFrame.dispose();
+//            }
+//        }
+        myGame.getName();
+        myGame.sorter();
+        difficulty.getInput(null);
+        
+
+        Hangman.inFile.close();
+
+        
+        //This is where the GUI code starts
                Hangman hangman = null;
         try {  
             hangman = new Hangman();
@@ -56,64 +88,12 @@ public class Hangman {
             if (Hangman.mainFrame != null) {
                 Hangman.mainFrame.dispose();
             }
-        } 
-        myGame.getName();
-        myGame.sorter();
-        difficulty.getInput(null);
-        //GuessedLetters myGuessedLetters = new GuessedLetters();
-        //myGuessedLetters.getGuess();
-
-        //myGuessedLetters.checkGuess(myGuessedLetters.getGuess());
-
-
-
-//        Lose myLosses = new Lose();
-//        myLosses.displayNumLose();
-//        Wins myWins = new Wins();
-//        myWins.displayNumWins();
-        //call the functions from their classes
+        }   
         
-        /*if (numGuesses >= numTurns) {
-            System.out.println(playerLooses());
-        } else {
-            System.out.println(playerWins());
-        }*/
-        Hangman.inFile.close();
-
-        //Jessica added this so that arrayAlphabet[] would show up on game
-        //Game alGame= new Game();
-        //alGame.alphabet();
-        
-//               Hangman hangman = null;
-//        try {  
-//            hangman = new Hangman();
-//        
-//                 java.awt.EventQueue.invokeLater(new Runnable() {
-//                public void run() {
-//                    Hangman.mainFrame = new MainFrame();
-//                    Hangman.mainFrame.setVisible(true);
-//                }
-//            });
-//        } 
-//
-//        catch (Throwable ex) {     
-//           // ErrorType.displayErorrMsg("Unexpected error: " + ex.getMessage());
-//           //ErrorType.displayErorrMsg(ex.getStackTrace().toString());           
-//        } 
-//        finally {
-//            if (Hangman.mainFrame != null) {
-//                Hangman.mainFrame.dispose();
-//            }
-//        }   
+        //This is where the GUI code ends
     }
 
-    /*public static String playerLooses() {
-        return "Sorry you lost, better luck next time!";
-    }
-    
-    public static String playerWins() {
-        return "You won, great job!";
-    }*/
+ 
 
     public void displayHelp() {
     }

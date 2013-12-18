@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package citbyui.cit260.hangman.frames;
-
+import hangman.Game;
 /**
  *
  * @author jessicahildenbrand
@@ -29,6 +29,7 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         jpBody = new javax.swing.JPanel();
         jpTitle = new javax.swing.JPanel();
         jlTitle = new javax.swing.JLabel();
@@ -41,7 +42,6 @@ public class MainFrame extends javax.swing.JFrame {
         jbQuit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtWelcome = new javax.swing.JTextArea();
-        jTextField1 = new javax.swing.JTextField();
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -53,6 +53,8 @@ public class MainFrame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,7 +72,7 @@ public class MainFrame extends javax.swing.JFrame {
             .add(jpTitleLayout.createSequentialGroup()
                 .add(150, 150, 150)
                 .add(jlTitle)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
         jpTitleLayout.setVerticalGroup(
             jpTitleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -164,11 +166,9 @@ public class MainFrame extends javax.swing.JFrame {
         jtWelcome.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
         jtWelcome.setForeground(new java.awt.Color(0, 153, 0));
         jtWelcome.setRows(5);
-        jtWelcome.setText("WELCOME!");
+        jtWelcome.setText("Thanks for playing our hangman game!!");
         jtWelcome.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane1.setViewportView(jtWelcome);
-
-        jTextField1.setText("jTextField1");
 
         org.jdesktop.layout.GroupLayout jpBodyLayout = new org.jdesktop.layout.GroupLayout(jpBody);
         jpBody.setLayout(jpBodyLayout);
@@ -177,25 +177,18 @@ public class MainFrame extends javax.swing.JFrame {
             .add(jpTitle, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .add(jpBodyLayout.createSequentialGroup()
                 .add(jpMenuItems, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(56, 56, 56)
-                .add(jpBodyLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 144, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .add(18, 18, 18)
+                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 261, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpBodyLayout.setVerticalGroup(
             jpBodyLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jpBodyLayout.createSequentialGroup()
                 .add(jpTitle, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jpBodyLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(jpBodyLayout.createSequentialGroup()
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jpMenuItems, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jpBodyLayout.createSequentialGroup()
-                        .add(60, 60, 60)
-                        .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 81, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                    .add(jpMenuItems, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jScrollPane1))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
 
@@ -218,11 +211,12 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jbBoardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBoardActionPerformed
-        jtWelcome.setText("Welcome To Hangman");
+        jtWelcome.setText("Great Job, Thanks for playing our game!");
     }//GEN-LAST:event_jbBoardActionPerformed
 
     private void jbGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGameActionPerformed
         // TODO add your handling code here:
+        //Game.activateControl();
     }//GEN-LAST:event_jbGameActionPerformed
 
     private void jbLetterHolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLetterHolderActionPerformed
@@ -239,7 +233,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
         // TODO add your handling code here:
-        dispose();
+        //this.setStatus(Status.EXIT);
+        //mainMenuControl.activateControl(status);
+        this.dispose(); //exit the game
     }//GEN-LAST:event_jbQuitActionPerformed
 
     /**
