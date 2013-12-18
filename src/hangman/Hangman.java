@@ -9,6 +9,7 @@ public class Hangman {
     private static final Scanner inFile = new Scanner(System.in);
     private static final HelpMenuView helpMenu = new HelpMenuView();
     private static final Difficulty difficulty = new Difficulty();
+    public static MainFrame mainFrame;
 
     public static Scanner getInputFile() {
         return Hangman.inFile;
@@ -34,6 +35,28 @@ public class Hangman {
     public static void main(String[] args) {
 
         Hangman myGame = new Hangman();
+        
+               Hangman hangman = null;
+        try {  
+            hangman = new Hangman();
+        
+                 java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    Hangman.mainFrame = new MainFrame();
+                    Hangman.mainFrame.setVisible(true);
+                }
+            });
+        } 
+
+        catch (Throwable ex) {     
+           // ErrorType.displayErorrMsg("Unexpected error: " + ex.getMessage());
+           //ErrorType.displayErorrMsg(ex.getStackTrace().toString());           
+        } 
+        finally {
+            if (Hangman.mainFrame != null) {
+                Hangman.mainFrame.dispose();
+            }
+        } 
         myGame.getName();
         myGame.sorter();
         difficulty.getInput(null);
@@ -61,27 +84,27 @@ public class Hangman {
         //Game alGame= new Game();
         //alGame.alphabet();
         
-               Hangman hangman = null;
-        try {  
-            hangman = new Hangman();
-        
-                 java.awt.EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    Hangman.mainFrame = new MainFrame();
-                    Hangman.mainFrame.setVisible(true);
-                }
-            });
-        } 
-
-        catch (Throwable ex) {     
-            ErrorType.displayErorrMsg("Unexpected error: " + ex.getMessage());
-            ErrorType.displayErorrMsg(ex.getStackTrace().toString());           
-        } 
-        finally {
-            if (Hangman.MainFrame != null) {
-                Hangman.MainFrame.dispose();
-            }
-        }   
+//               Hangman hangman = null;
+//        try {  
+//            hangman = new Hangman();
+//        
+//                 java.awt.EventQueue.invokeLater(new Runnable() {
+//                public void run() {
+//                    Hangman.mainFrame = new MainFrame();
+//                    Hangman.mainFrame.setVisible(true);
+//                }
+//            });
+//        } 
+//
+//        catch (Throwable ex) {     
+//           // ErrorType.displayErorrMsg("Unexpected error: " + ex.getMessage());
+//           //ErrorType.displayErorrMsg(ex.getStackTrace().toString());           
+//        } 
+//        finally {
+//            if (Hangman.mainFrame != null) {
+//                Hangman.mainFrame.dispose();
+//            }
+//        }   
     }
 
     /*public static String playerLooses() {
