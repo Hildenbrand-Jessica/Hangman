@@ -34,11 +34,7 @@ public class MainFrame extends javax.swing.JFrame {
         jpTitle = new javax.swing.JPanel();
         jlTitle = new javax.swing.JLabel();
         jpMenuItems = new javax.swing.JPanel();
-        jbBoard = new javax.swing.JButton();
-        jbGame = new javax.swing.JButton();
-        jbLetterHolder = new javax.swing.JButton();
-        jbRegPlayer = new javax.swing.JButton();
-        jbSecretWord = new javax.swing.JButton();
+        jbFinish = new javax.swing.JButton();
         jbQuit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtWelcome = new javax.swing.JTextArea();
@@ -84,43 +80,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jpMenuItems.setBackground(new java.awt.Color(255, 255, 204));
 
-        jbBoard.setText("Board");
-        jbBoard.setToolTipText("");
-        jbBoard.addActionListener(new java.awt.event.ActionListener() {
+        jbFinish.setText("Finish");
+        jbFinish.setToolTipText("");
+        jbFinish.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbBoardActionPerformed(evt);
-            }
-        });
-
-        jbGame.setText("Game");
-        jbGame.setToolTipText("");
-        jbGame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbGameActionPerformed(evt);
-            }
-        });
-
-        jbLetterHolder.setText("Letter Holder");
-        jbLetterHolder.setToolTipText("");
-        jbLetterHolder.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbLetterHolderActionPerformed(evt);
-            }
-        });
-
-        jbRegPlayer.setText("Reg Player");
-        jbRegPlayer.setToolTipText("");
-        jbRegPlayer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbRegPlayerActionPerformed(evt);
-            }
-        });
-
-        jbSecretWord.setText("Secret Word");
-        jbSecretWord.setToolTipText("");
-        jbSecretWord.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSecretWordActionPerformed(evt);
+                jbFinishActionPerformed(evt);
             }
         });
 
@@ -136,26 +100,16 @@ public class MainFrame extends javax.swing.JFrame {
         jpMenuItems.setLayout(jpMenuItemsLayout);
         jpMenuItemsLayout.setHorizontalGroup(
             jpMenuItemsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jpMenuItemsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                .add(jbGame, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jbLetterHolder, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .add(jbRegPlayer, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jbSecretWord, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .add(jbBoard, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .add(jbQuit)
+            .add(jpMenuItemsLayout.createSequentialGroup()
+                .add(jpMenuItemsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jbFinish, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jbQuit))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpMenuItemsLayout.setVerticalGroup(
             jpMenuItemsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jpMenuItemsLayout.createSequentialGroup()
-                .add(jbBoard)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jbGame)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jbLetterHolder)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jbRegPlayer)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jbSecretWord)
+                .add(jbFinish)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jbQuit)
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -166,7 +120,7 @@ public class MainFrame extends javax.swing.JFrame {
         jtWelcome.setFont(new java.awt.Font("Futura", 0, 13)); // NOI18N
         jtWelcome.setForeground(new java.awt.Color(0, 153, 0));
         jtWelcome.setRows(5);
-        jtWelcome.setText("Thanks for playing our hangman game!!");
+        jtWelcome.setText("Way to go!");
         jtWelcome.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane1.setViewportView(jtWelcome);
 
@@ -186,10 +140,10 @@ public class MainFrame extends javax.swing.JFrame {
             .add(jpBodyLayout.createSequentialGroup()
                 .add(jpTitle, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jpBodyLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(jpMenuItems, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jScrollPane1))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .add(jpBodyLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 218, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jpMenuItems, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
@@ -210,26 +164,9 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jbBoardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBoardActionPerformed
+    private void jbFinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFinishActionPerformed
         jtWelcome.setText("Great Job, Thanks for playing our game!");
-    }//GEN-LAST:event_jbBoardActionPerformed
-
-    private void jbGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGameActionPerformed
-        // TODO add your handling code here:
-        //Game.activateControl();
-    }//GEN-LAST:event_jbGameActionPerformed
-
-    private void jbLetterHolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLetterHolderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbLetterHolderActionPerformed
-
-    private void jbRegPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegPlayerActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbRegPlayerActionPerformed
-
-    private void jbSecretWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSecretWordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbSecretWordActionPerformed
+    }//GEN-LAST:event_jbFinishActionPerformed
 
     private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
         // TODO add your handling code here:
@@ -278,12 +215,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JButton jbBoard;
-    private javax.swing.JButton jbGame;
-    private javax.swing.JButton jbLetterHolder;
+    private javax.swing.JButton jbFinish;
     private javax.swing.JButton jbQuit;
-    private javax.swing.JButton jbRegPlayer;
-    private javax.swing.JButton jbSecretWord;
     private javax.swing.JLabel jlTitle;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpMenuItems;
